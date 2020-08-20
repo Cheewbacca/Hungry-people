@@ -1,0 +1,25 @@
+.text-block
+    h2.h2-main-font.header-strip CONTACT
+    h4.h4-main-font Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.
+form(action="")
+    label(for="contact_name") Name
+    input(type="text" id="contact_name" name="contact_name" placeholder="Name" required).main-font
+    label(for="contact_mail") e-mail
+    input(type="email" id="contact_mail" name="contact_mail" placeholder="Email" required).main-font
+    label(for="contact_phone") Phone
+    input(type="tel" id="contact_phone" name="contact_phone" placeholder="Phone" required).main-font
+    label(for="contact_message") Message
+    textarea#contact_message(name="contact_message" placeholder="Message" rows="5" cols="33" maxlength="20" data-gramm_editor="false" required)
+    ul
+        li
+            img(data-src="../static/img/marker.svg", alt="" class="lazyload")
+            a.main-font(href="https://www.google.com/maps/place/Boulevard+Dr,+Edgware,+London,+UK/@51.595908,-0.2435659,17z/data=!3m1!4b1!4m5!3m4!1s0x4876112b847e1733:0x5459509257c80ef1!8m2!3d51.5959047!4d-0.2413772")  5th London Boulevard, U.K.
+        li
+            img(data-src="../static/img/mail.svg", alt="" class="lazyload")
+            a.main-font(href="mailto:office@mindblister.com") office@mindblister.com
+        li
+            img(data-src="../static/img/phone.svg", alt="" class="lazyload")
+            a.main-font(href="tel:+40 729 131 637")  +40 729 131 637
+    button(type="submit" id="contact_submit").header-fonts SEND MESSAGE
+
+

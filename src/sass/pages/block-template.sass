@@ -1,0 +1,131 @@
+.block-template
+    display: flex
+    position: relative
+    @media screen and ( max-width: 768px )
+        flex-wrap: wrap
+    @media screen and ( min-width: 768px )
+        &::after
+            height: 100%;
+            width: 1px;
+            background-color: $border-gray;
+            top: 0
+            left: 20%;
+            position: absolute;
+            content: ' ';
+        &::before
+            height: 100%;
+            width: 1px;
+            background-color: $border-gray;
+            top: 0
+            right: 20%;
+            position: absolute;
+            content: ' ';
+    .signature
+        position: absolute;
+        top: calculateHeight(40)
+        left: 0;
+        width: 100%;
+        text-align: center
+    .slider
+        width: 100%;
+        .slide
+            display: flex   
+            @media screen and ( max-width: 768px )
+                flex-wrap: wrap
+            .text-block
+                h2 
+                    @media screen and ( max-width: 768px )
+                        font-size: 20px
+            .img-block
+                .square
+                    @media screen and ( max-width: 768px )
+                        width: calculateWidth(250)
+                        height: calculateWidth(250)
+                        margin-left: calculateWidth(-125)
+        .slick-dots
+            display: flex;
+            position: absolute
+            bottom: calculateHeight(-80)
+            width: calculateWidth(70)
+            left: 50%;
+            margin-left: calculateWidth(-35)
+            justify-content: space-around
+            @media screen and ( max-width: 768px )
+                width: tW(70)
+                margin-left: tW(-35)
+            @media screen and ( max-width: 500px )
+                width: 70px
+                margin-left: -35px
+            li  
+                button 
+                    width: calculateWidth(10)
+                    height: calculateWidth(10)
+                    background: $slickButton
+                    border-radius: 100%;
+                    border: initial;
+                    outline: none;
+                    font-size: 0;
+                    cursor: pointer
+                    @media screen and ( max-width: 768px )
+                        width: tW(10)
+                        height: tW(10)
+                    @media screen and ( max-width: 500px )
+                        width: 10px
+                        height: 10px
+            .slick-active
+                button 
+                    background: $white
+    .signature-bottom
+        top: initial;
+        bottom: calculateHeight(40);
+        color: $dark
+    .text-block
+        display: flex;
+        justify-content: center
+        align-items: center
+        flex-wrap: wrap
+        width: 50%
+        flex-direction: column
+        @media screen and ( max-width: 768px )
+            width: 100%
+        h4
+            margin: calculateHeight(30) 0
+    .img-block
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: calculateWidth(80)
+        position: relative
+        z-index: 1;
+        @media screen and ( max-width: 768px )
+            width: 100%
+            margin: 30px 0
+        img
+            width: 75%
+            filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.5));
+        .square
+            width: calculateWidth(250)
+            height: calculateWidth(250)
+            border: calculateWidth(20) solid $yellow;
+            position: absolute
+            left: 75%
+            margin-left: calculateWidth(-125)
+            @media screen and ( max-width: 768px )
+                width: tW(250)
+                height: tW(250)
+                margin-left: tW(-125)
+.reversed
+    .text-block
+        order: 1
+        h2, h4, p 
+            color: $white
+    .img-block
+        margin-right: calculateWidth(80)
+        margin-left: initial
+        justify-content: flex-end
+        .square
+            left: initial
+            margin-left: initial;
+            right: 75%
+            margin-right: calculateWidth(-125)

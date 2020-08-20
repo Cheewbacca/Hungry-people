@@ -1,0 +1,37 @@
+doctype html
+html
+    head(lang="en")
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="static\\css\\slick.css")
+        link(rel="stylesheet", href="static\\css\\main.css")
+        link(rel="shortcut icon", href="../static/img/favicon.png", type="image/x-icon")
+        title Hungry people
+    body
+        include ../includes/header.pug
+        section.main.main-padding 
+            include index/first_section
+        section.block-template.about.main-padding.padding-tb-100#about
+            include index/about
+        section.block-template.team.reversed.main-padding.padding-tb-100#team
+            include index/team
+        section.block-template.booking.main-padding.padding-tb-100#booking
+            include index/booking
+        section.block-template.team.reversed.main-padding.padding-tb-100#specialty
+            include index/specialty
+        section.menu.main-padding.padding-tb-100#menu
+            include index/menu
+        section.block-template.events.main-padding.padding-tb-100#events
+            include index/events
+        section.galery#galery
+            include index/galery
+        section.contact.main-padding.padding-tb-100#contact
+            include index/contact
+        section.map#map
+            include index/map
+        footer.footer.main-padding.padding-tb-50#footer
+            include ../includes/footer
+                
+        script(src="static//js//libs.min.js" defer)
+        script(src="static//js//main.js" defer)
+        script(src="static//js//lazy.js" defer)

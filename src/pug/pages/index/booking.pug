@@ -1,0 +1,42 @@
+span.signature-bottom.signature.main-font Mon - Fri: <strong> 8PM - 10PM </strong>, Sat - Sun:<strong> 8PM - 3AM</strong>, Phone: <strong>+40 729 131 637/+40 726 458 782</strong>
+.text-block
+    h2.h2-main-font.header-strip book a table
+    form(action="")#booking_form
+        label(for="name") Name
+        input(type="text" id="name" placeholder="Name" name="name" required).main-font 
+
+        label(for="email") E-mail
+        input(type="email" id="email" placeholder="Email" name="email" required).main-font 
+
+        label(for="tel") Phone
+        input(type="tel" id="tel" placeholder="Phone" name="phone" required).main-font 
+
+        label(for="people") People
+        .custom_select
+            input(type="hidden" id="people" placeholder="People" name="people") 
+            ul.list
+                li.closed_list_item.main-font People
+                li.main-font 1
+                li.main-font 2
+                li.main-font 3 
+                li.main-font 4 
+                li.main-font > 4
+
+        label(for="date") Date
+        input(type="text" id="date" placeholder="Date" onfocus="(this.type='date')" onblur="(this.type='text')" required)  
+
+        label(for="time") Time
+        .custom_select
+            input(type="hidden" id="time" placeholder="Time" name="time").main-font 
+            ul.list
+                li.closed_list_item.main-font Time
+                li.main-font 10:00
+                li.main-font 12:00
+                li.main-font 14:00
+                li.main-font 16:00
+                li.main-font 18:00
+
+        button.header-fonts(type="submit" value="BOOK NOW")#book_submit BOOK NOW
+.img-block
+    img(data-src="../static/img/booking.png", alt="" class="lazyload")
+    .square

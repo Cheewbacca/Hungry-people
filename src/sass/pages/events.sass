@@ -1,0 +1,52 @@
+.events
+    background-image: url(../img/event-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%
+    .img-block
+        justify-content: flex-end
+        margin: initial;
+        margin-right: 40px
+        @media screen and ( max-width: 768px )
+            margin: 50px 0;
+        .square
+            left: initial
+            margin-left: initial;
+            right: 75%
+            margin-right: calculateWidth(-125)
+            @media screen and ( max-width: 500px )
+                display: none
+        &:last-child
+            justify-content: flex-start
+            margin-right: initial
+            margin-left: 40px
+            @media screen and ( max-width: 768px )
+                margin-left: initial
+            .aside
+                align-items: flex-end
+                order: 0
+            .square
+                right: initial
+                margin-right: initial;
+                left: 75%
+                margin-left: calculateWidth(-125)
+                
+        img
+            width: 60%;
+            min-height: calculateHeight(475)
+            object-fit: cover
+            @media screen and ( max-width: 500px )
+                width: calc(100% - 15%)
+        .aside
+            width: 15%
+            background-color: $black
+            height: 100%;
+            display: flex
+            justify-content: center
+            align-items: flex-start
+            padding: 25px 0
+            order: 1
+            h3 
+                writing-mode: vertical-lr;
+                text-orientation: mixed;
+                white-space: nowrap
+                text-transform: uppercase
